@@ -1,9 +1,6 @@
 body{
     width: 100vw;
 }
-.dropdown:hover .dropdown-menu{
-  display: block;
-}
 .intro{
     padding-left: 2vw;
     padding-right: auto;
@@ -13,7 +10,21 @@ img.headerImg{
     width: auto;
     padding-left: -5px;
 }  
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (min-height: 1441px) {
-    
+/* */
+  @media (min-width: 576px) {
+  .dropdown-menu{
+    display: block;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+}
+@media (max-width: 1000) {
+  .dropdown:hover{
+    display: none;
+  }
+}
+.dropdown:hover .dropdown-menu{
+  display: block;
+  margin-top: 0;
+  opacity: 1;
 }
