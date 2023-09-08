@@ -11,20 +11,15 @@ img.headerImg{
     padding-left: -5px;
 }  
 /* */
-  @media (min-width: 576px) {
+  @media (min-width: 1000px) {
   .dropdown-menu{
     display: block;
     opacity: 0;
     transition: all 0.2s;
   }
-}
-@media (max-width: 1000) {
-  .dropdown:hover{
-    display: none;
+  .dropdown:hover .dropdown-menu{
+    display: block;
+    margin-top: 0;
+    opacity: 1;
   }
-}
-.dropdown:hover .dropdown-menu{
-  display: block;
-  margin-top: 0;
-  opacity: 1;
 }
