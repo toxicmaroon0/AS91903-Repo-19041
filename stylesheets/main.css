@@ -1,5 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+
 body{
     width: 100vw;
+    background-color: white;
+    color: black;
 }
 .intro{
     padding-left: 2vw;
@@ -10,7 +15,7 @@ img.headerImg{
     width: auto;
     padding-left: -5px;
 }  
-/* */
+/* Dropdown box fade in/out */
   @media (min-width: 1000px) {
   .dropdown-menu{
     display: block;
@@ -23,26 +28,8 @@ img.headerImg{
     opacity: 1;
   }
 }
-/* Dark mode toggler css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
+/* Dark mode toggler css */
 * {box-sizing: border-box;}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  min-height: 100vh;
-  margin: 0;
-  transition: background 0.2s linear;
-}
-
-body.dark {background-color: #292c35;} /* #9b59b6 */
-
 body.dark h1, body.dark .support a {color: #fff;}
 
 .checkbox {
@@ -80,4 +67,24 @@ body.dark h1, body.dark .support a {color: #fff;}
 
 .checkbox:checked + .checkbox-label .ball {
   transform: translateX(24px);
+}
+/* Dark mode theme */
+body.dark{
+  background-color: #292c35;
+  color: whitesmoke;
+}
+.dropdown-menu.dark{
+  background-color: #111;
+}
+.dropdown-menu.dark li a{
+  color: whitesmoke;
+  background-color: #111;
+}
+.dropdown-menu.dark li a.disabled{
+  background-color: #111;
+  opacity: 0.8;
+  color: gray;
+}
+.dropdown-menu.dark li:hover{
+  background-color: #111;
 }
