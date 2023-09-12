@@ -6,3 +6,5 @@ Responsive taskbar integration V1.0.0<br>
 Light/Dark mode integration V1.0.0<br>
 Site-wide themeing V1.0.0<br>
 Informative Contact page V0.2.0<br>
+Temoprary commenting of Dark/Light mode switcher<br>
+Details on rental page V0.1.0<br>
