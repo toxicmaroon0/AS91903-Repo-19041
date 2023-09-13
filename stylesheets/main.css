@@ -30,6 +30,63 @@ img.headerImg{
 section{
   padding-left: 25px;
 }
+/* Page Details */
+section.detail{
+  display: inline-block;
+  width: 40%;
+  margin-left: 5%;
+  margin-right: auto;
+  margin-top: 25px;
+  padding-top: 15px;
+}
+.detail img{
+  width: 45%;
+  float: right;
+  padding-top: 3%;
+}
+.detail p{
+  float: left;
+  text-align: left;
+  width: 40%;
+  padding-top: 3%;
+  user-select: none;
+}
+.detail a{
+  text-decoration: underline;
+  color: black;
+}
+span.forLegalReasons{
+  color: rgba(1, 1, 1, 0.2);
+  font-size: 8px;
+  text-align: center;
+  text-emphasis: 1;
+  user-select: none;
+}
+.detail span.price{
+  text-align: center;
+  display: block;
+  font-size: large;
+  font-weight: bold;
+  user-select: none;
+}
+.divider{
+  border: 3px solid grey;
+  border-radius: 2px;
+  height: 126%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 25%;
+}
+@media (max-width: 999px) {
+  section.detail{
+    width: 90%;
+  }
+  .divider{
+    display: none;
+  }
+
+}
 /* Dark mode toggler css <--->
 * {box-sizing: border-box;}
 body.dark h1, body.dark .support a {color: #fff;}
