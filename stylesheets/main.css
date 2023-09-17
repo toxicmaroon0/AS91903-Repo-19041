@@ -14,8 +14,8 @@ img.headerImg{
     width: auto;
     padding-left: -5px;
 }  
-/* Dropdown box fade in/out */
-  @media (min-width: 1000px) {
+/* Dropdown box fade in/out NB: window must be >990px in width for dropdown to fade in/out */
+  @media (min-width: 991px) {
   .dropdown-menu{
     display: block;
     opacity: 0;
@@ -30,7 +30,7 @@ img.headerImg{
 section{
   padding-left: 25px;
 }
-/* Page Details */
+/* Page Details CSS */
 section.detail{
   display: inline-block;
   width: 40%;
@@ -73,6 +73,7 @@ span.forLegalReasons{
   float: unset;
   margin-left: 33%;
 }
+/* Divider CSS <div class="divider"></div> NB: must be empty div */
 .divider{
   border: 3px solid grey;
   border-radius: 2px;
@@ -82,16 +83,11 @@ span.forLegalReasons{
   margin-left: -3px;
   top: 25%;
 }
-.divider_type1{
-  border: 3px solid grey;
-  border-radius: 2px;
+.divider.type1{
   height: 60%;
-  position: absolute;
-  left: 50%;
-  margin-left: -3px;
-  top: 25%;
 }
-@media (max-width: 999px) {
+/* For screens smaller than 1000px in width */
+@media (max-width: 990px) {
   section.detail{
     width: 90%;
   }
