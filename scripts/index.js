@@ -30,6 +30,37 @@ finishCheckReset = function(){
   setTimeout(() => {checkbox.classList.remove('reset_pos');},500)
 };
 
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].classList.add("picked");
+  if (dots[slideIndex-2].classList.contains("picked")) {dots[slideIndex-2].classList.remove("picked")}
+  if (dots[slideIndex+1].classList.contains("picked")) {dots[slideIndex+1].classList.remove("picked")}
+}
+
 ////Dark mode toggler js code//
 //checkbox.addEventListener("change", () => {
 //  document.body.classList.toggle("dark");
@@ -49,7 +80,7 @@ finishCheckReset = function(){
 //  localStorage.setItem('dark', false)
 //};
 
-////Page load
-//document.addEventListener("DOMContentLoaded", function() {
+//Page load
+//window.addEventListener('load', function() {
 //  darkModeCheck(localStorage.getItem('dark'));
 //});
