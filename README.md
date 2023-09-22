@@ -9,4 +9,4 @@ Informative Contact page V0.3.0<br>
 Temoprary commenting of Dark/Light mode switcher<br>
 Details on rental page V1.0.0<br>
 Image optimisation (from 46.2MB to 8.4MB)<br>
-Gallery detailng V0.1.0<br>
+Gallery detailng V1.0.0<br>

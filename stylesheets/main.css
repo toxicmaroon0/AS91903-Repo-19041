@@ -84,6 +84,18 @@ span.forLegalReasons{
   float: unset;
   margin-left: 33%;
 }
+.detail.full{
+  width: 90%;
+  margin-right: 5%;
+  margin-left: 5%;
+  padding-left: none;
+}
+.detail.full img{
+  padding: 1%;
+  float: none;
+  margin-left: 2%;
+  margin-right: 2%;
+}
 /* Divider CSS <div class="divider"></div> NB: must be empty div */
 .divider{
   border: 3px solid grey;
@@ -143,8 +155,13 @@ span.forLegalReasons{
 }
 
 /* On hover, add a black background color with a little bit see-through */
+.prev, .next {
+  background-color: rgba(0,0,0,0.4);
+  text-decoration: none;
+}
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
+  color: whitesmoke;
 }
 
 /* Caption text */
@@ -158,9 +175,10 @@ span.forLegalReasons{
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
+/* Number text (1/7 etc) */
 .numbertext {
   color: #f2f2f2;
+  background-color: rgba(0,0,0,0.4);
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -191,11 +209,13 @@ span.forLegalReasons{
 
 @keyframes fade {
   from {opacity: .4}
-  to {opacity: 1}
+  to {opacity: 1; display: block;}
 }
-.slideshow-container img{
+
+.mySlides img{
   max-height: 70vh;
   width: 30vw;
+  float: none;
   align-self: center;
 }
 /* Dark mode toggler css <--->
