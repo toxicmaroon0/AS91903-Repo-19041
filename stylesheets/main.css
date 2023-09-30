@@ -2,6 +2,8 @@
 /*Above: Import URLs | Below: css*/
 * {
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 body{
   width: 100vw;
@@ -19,6 +21,7 @@ body{
 #intro{
   padding-left: 2vw;
   padding-right: 2vw;
+  user-select: none;
 }
 #intro h4{
   text-align: center;
@@ -28,7 +31,20 @@ img.headerImg{
   height: 4vh;
   width: auto;
   padding-left: -5px;
-}  
+}
+div .intro_headline, div .intro_text{
+  /*color: whitesmoke;*/
+  padding-top: 1vh;
+}
+div .intro_headline{
+  font-size: 45px;
+}
+div .intro_text{
+  padding-left: 15%;
+  padding-top: 10%;
+  font-size: 30px;
+  font-weight: bold;
+}
 /* Dropdown box fade in/out NB: window must be >990px in width for dropdown to fade in/out */
   @media (min-width: 991px) {
   .dropdown-menu{
