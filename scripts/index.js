@@ -65,13 +65,30 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].classList.add("picked");
 
-  if (dots[slideIndex-2].classList.contains("picked")) {
-    dots[slideIndex-2].classList.remove("picked")
-  }
   if (dots[slideIndex+1].classList.contains("picked")) {
     dots[slideIndex+1].classList.remove("picked")
   }
 }
+
+//Return to top of page button code
+// Get the button
+let mybutton = document.getElementById("returnTop");
+             
+// When the user scrolls down 350px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+            
+function scrollFunction() {
+  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+    }
+  }
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
 
 ////Dark mode toggler js code//
 //checkbox.addEventListener("change", () => {

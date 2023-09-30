@@ -7,6 +7,13 @@ body{
   width: 100vw;
   background-color: white;
   color: black;
+  overflow-y: scroll; /* Show vertical scrollbar */
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;	
 }
 /* Intro class css */
 #intro{
@@ -79,6 +86,8 @@ span.forLegalReasons{
   font-size: large;
   font-weight: bold;
   user-select: none;
+  -webkit-user-select: none; /* For Safari */
+  -ms-user-select: none; /* For Internet explorer for those who still use it */
 }
 .detail.centre{
   float: unset;
@@ -155,7 +164,7 @@ span.forLegalReasons{
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev, .next {
+a.prev, a.next{
   background-color: rgba(0,0,0,0.4);
   text-decoration: none;
 }
@@ -167,6 +176,9 @@ span.forLegalReasons{
 /* Caption text */
 .text {
   color: #f2f2f2;
+  background-color: rgba(0,0,0,0.4);
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -209,15 +221,35 @@ span.forLegalReasons{
 
 @keyframes fade {
   from {opacity: .4}
-  to {opacity: 1; display: block;}
+  to {opacity: 1;}
 }
 
 .mySlides img{
-  max-height: 70vh;
-  width: 30vw;
-  float: none;
-  align-self: center;
+  height: 80vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, 0);
 }
+
+/* CSS for return to top button */
+#returnTop {
+	display: none; /* Hidden by default */
+	position: fixed; /* Fixed/sticky position */
+	bottom: 20px; /* Place the button at the bottom of the page */
+	right: 30px; /* Place the button 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	background-color: rgba(211, 211, 211, 0.9); /* Set a background color */
+	color:  darkslategray; /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding:  5px 10px; /* Some padding */
+	border-radius: 15px; /* Rounded corners */
+	font-size: 18px; /* Increase font size */
+}  
+#returnTop:hover {
+	background-color: lightgray; /* Add a dark-grey background on hover */
+  }
 /* Dark mode toggler css <--->
 * {box-sizing: border-box;}
 body.dark h1, body.dark .support a {color: #fff;}
