@@ -11,3 +11,4 @@ Details on rental page V1.0.0<br>
 Image optimisation (from 46.2MB to 8.4MB)<br>
 Gallery detailng V2.0.0<br>
 Index page detailing V1.0.0<br>
+Alt-text for images V1.0.0<br>
